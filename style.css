@@ -47,22 +47,26 @@ button:focus-visible, input:focus-visible, select:focus-visible { outline: 3px s
 .badge { display: inline-grid; place-items: center; min-width: 21px; height: 21px; margin-left: 6px; padding: 0 5px; border-radius: 50%; background: var(--gold); color: #fff; font-size: 11px; }
 
 /* Intro banner */
-main { max-width: 1320px; margin: 0 auto; padding: 30px 5vw 76px; }
-main::before {
-  content: 'THE EVERYDAY EDIT\\A Thoughtful finds. Better living.';
-  white-space: pre-line; display: block; min-height: 230px; margin-bottom: 34px;
-  padding: 48px clamp(24px, 6vw, 76px); border-radius: 18px;
+main { max-width: 1320px; margin: 0 auto; padding: 30px 5vw 56px; }
+.hero {
+  min-height: 310px; margin-bottom: 54px; padding: 48px clamp(24px, 6vw, 76px);
+  display: flex; flex-direction: column; align-items: flex-start; justify-content: center;
+  border-radius: 18px; color: #fffefa;
   background: radial-gradient(circle at 85% 20%, rgba(190,158,105,.26), transparent 28%),
               linear-gradient(115deg, #263b32 0%, #344b3e 58%, #59634c 100%);
-  color: #fffefa; font-family: 'Playfair Display', serif; font-size: clamp(29px, 4.5vw, 52px);
-  line-height: 1.18; letter-spacing: -.8px; white-space: pre-line;
   box-shadow: var(--shadow);
 }
-main::after {
-  content: 'Curated essentials for your everyday moments — explore the collection below.';
-  display: block; margin: -118px 0 90px clamp(24px, 6vw, 76px);
-  color: rgba(255,254,250,.72); font-size: 13px; letter-spacing: .02em;
-}
+.hero-kicker, .eyebrow { color: #d4b77f; font-size: 10px; font-weight: 700; letter-spacing: .18em; }
+.hero h2 { margin: 14px 0 10px; font-family: 'Playfair Display', serif; font-size: clamp(36px, 5vw, 58px); line-height: 1.08; letter-spacing: -1px; }
+.hero h2 em { color: #d4b77f; font-weight: 600; }
+.hero p { color: rgba(255,254,250,.75); font-size: 13px; }
+.hero a { margin-top: 24px; padding-bottom: 5px; border-bottom: 1px solid rgba(212,183,127,.7); color: #fffefa; font-size: 12px; font-weight: 600; text-decoration: none; }
+.hero a span { margin-left: 12px; color: #d4b77f; }
+.section-heading { display: flex; justify-content: space-between; align-items: end; gap: 16px; margin-bottom: 24px; }
+.section-heading h2 { margin-top: 6px; font-family: 'Playfair Display', serif; font-size: clamp(25px, 3vw, 34px); font-weight: 600; }
+.section-note { color: var(--muted); font-size: 12px; }
+.footer { display: flex; justify-content: space-between; align-items: center; gap: 15px; padding: 25px 5vw; border-top: 1px solid var(--line); background: #fffefa; color: var(--muted); font-size: 11px; }
+.footer .logo { font-size: 21px; }
 
 /* Filters and product collection */
 .filters { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 18px; margin-bottom: 18px; }
@@ -118,9 +122,11 @@ select { padding: 10px 35px 10px 14px; border: 1px solid var(--line); border-rad
   .header { flex-wrap: wrap; gap: 12px; padding: 14px 18px; }
   .logo { flex: 1; font-size: 24px; }
   .search { order: 3; flex-basis: 100%; max-width: none; }
-  main { padding: 20px 18px 55px; }
-  main::before { min-height: 190px; margin-bottom: 28px; padding: 36px 25px; font-size: 34px; }
-  main::after { margin: -100px 0 75px 25px; max-width: 80%; font-size: 11px; }
+  main { padding: 20px 18px 45px; }
+  .hero { min-height: 255px; margin-bottom: 38px; padding: 34px 25px; }
+  .hero h2 { font-size: 39px; }
+  .section-heading { align-items: flex-start; flex-direction: column; gap: 6px; }
+  .footer { padding: 22px 18px; }
   .filters { align-items: flex-start; }
   .controls { width: 100%; justify-content: space-between; gap: 10px; }
   .grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; }
